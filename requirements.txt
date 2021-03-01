@@ -75,7 +75,6 @@ Telethon==1.17.5
 timedelta==2020.12.3
 tinycss2==1.1.0
 toml==0.10.1
-traitlets==5.0.5
 typing-extensions==3.7.4.3
 urllib3==1.23
 uuid==1.30
