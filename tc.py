@@ -1,6 +1,6 @@
 import telebot
 from random import randint
-bot = telebot.TeleBot('1659751256:AAH76dg67kMVf0CdGnSX20g9GfDIW1D2mQI')
+bot = telebot.TeleBot('1670953127:AAH6N-AJ9E4Rvek7i3cS8u50vigjk6B3oJo')
 
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard1.row('🔥 Автарка 30₽ 🔥','☄️ Шапка 50₽ ☄️')
