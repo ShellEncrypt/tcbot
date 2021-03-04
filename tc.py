@@ -5,7 +5,8 @@ bot = telebot.TeleBot('1670953127:AAH6N-AJ9E4Rvek7i3cS8u50vigjk6B3oJo')
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard1.row('🔥 Автарка 30₽ 🔥','☄️ Шапка 50₽ ☄️')
 keyboard1.row('🎋 Оверлей 40₽ 🎋','🌴 Интро 40₽ 🌴')
-keyboard1.row('🐙 Пиар 20₽ 🐙','🍷 Идентификация QIWI 15₽ 🍷')
+keyboard1.row('🐙 Пиар 20₽ 🐙','🐠 TheCookiss Premium Pack 🐠')
+keyboard1.row('🍷 Идентификация QIWI 15₽ 🍷')
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
@@ -40,7 +41,11 @@ def send_text(message):
             markup = telebot.types.InlineKeyboardMarkup(row_width=2)
             item1 = telebot.types.InlineKeyboardButton("🔑 Купить 🔑", callback_data='buyp')
             markup.add(item1)
-            mess = bot.send_message(message.chat.id, '🏦 Сумма: 20₽', reply_markup=markup)
+        elif message.text == '🐠 TheCookiss Premium Pack 🐠':
+            markup = telebot.types.InlineKeyboardMarkup(row_width=2)
+            item1 = telebot.types.InlineKeyboardButton("🔑 Купить 🔑", callback_data='buyt')
+            markup.add(item1)
+            mess = bot.send_message(message.chat.id, '🏦 Сумма: 50₽', reply_markup=markup)
         elif message.text == '🍷 Идентификация QIWI 15₽ 🍷':
             markup = telebot.types.InlineKeyboardMarkup(row_width=2)
             item1 = telebot.types.InlineKeyboardButton("🔑 Купить 🔑", callback_data='buyq')
@@ -82,10 +87,16 @@ def callback_inline(call):
                 donal = telebot.types.InlineKeyboardButton("🍀 DonationAlerts 🍀", callback_data='daooooo')
                 sop.add(qiwi,donal)
                 bot.send_message(call.message.chat.id, "⚡️ Выберите способ оплаты:", reply_markup=sop)
-            if call.data == 'buyq':
+            if call.data == 'buyt':
                 sop = telebot.types.InlineKeyboardMarkup(row_width=2)
                 qiwi = telebot.types.InlineKeyboardButton("🥝 QIWI 🥝", callback_data='qwoooooo')
                 donal = telebot.types.InlineKeyboardButton("🍀 DonationAlerts 🍀", callback_data='daoooooo')
+                sop.add(qiwi,donal)
+                bot.send_message(call.message.chat.id, "⚡️ Выберите способ оплаты:", reply_markup=sop)
+            if call.data == 'buyq':
+                sop = telebot.types.InlineKeyboardMarkup(row_width=2)
+                qiwi = telebot.types.InlineKeyboardButton("🥝 QIWI 🥝", callback_data='qwooooooo')
+                donal = telebot.types.InlineKeyboardButton("🍀 DonationAlerts 🍀", callback_data='daooooooo')
                 sop.add(qiwi,donal)
                 bot.send_message(call.message.chat.id, "⚡️ Выберите способ оплаты:", reply_markup=sop)
             if call.data == 'qwo':
@@ -109,8 +120,12 @@ def callback_inline(call):
             if call.data == 'daooooo':
                 bot.send_message(call.message.chat.id, "💸 Сумма к оплате: 20₽\nНа: https://www.donationalerts.com/r/thecookiss\nОставить комментарий: pr"+str(randint(1, 999999999))+"\n\nПосле оплаты написать коментарий в @thecookissoriginal")
             if call.data == 'qwoooooo':
-                bot.send_message(call.message.chat.id, "ОПЛАТА КИВИ НЕДОСТУПНА")
+                bot.send_message(call.message.chat.id, "💸 Сумма к оплате: 50₽\nНа QIWI: THECOOKISS\nОставить комментарий: tpp"+str(randint(1, 999999999))+"\n\nПосле оплаты написать коментарий в @thecookissoriginal")
             if call.data == 'daoooooo':
+                bot.send_message(call.message.chat.id, "💸 Сумма к оплате: 50₽\nНа: https://www.donationalerts.com/r/thecookiss\nОставить комментарий: tpp"+str(randint(1, 999999999))+"\n\nПосле оплаты написать коментарий в @thecookissoriginal")
+            if call.data == 'qwooooooo':
+                bot.send_message(call.message.chat.id, "ОПЛАТА КИВИ НЕДОСТУПНА")
+            if call.data == 'daooooooo':
                 bot.send_message(call.message.chat.id, "💸 Сумма к оплате: 15₽\nНа: https://www.donationalerts.com/r/famii_python\nОставить комментарий: ide"+str(randint(1, 999999999))+"\n\nПосле оплаты написать коментарий в @fa_mii")
 
     except:
