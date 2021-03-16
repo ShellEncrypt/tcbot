@@ -30,7 +30,7 @@ def start_message(message):
 def send_text(message):
     if message.chat.type == 'private':
         if message.text == '🛒 Товары 🛒':
-            bot.send_message(message.chat.id, "👇 Товары доступны в клавиатуре 👇")
+            bot.send_message(message.chat.id, "👇 Товары доступны в клавиатуре 👇", reply_markup=keyboardaa)
         if message.text == '🔴 Канал 🔴':
             bot.send_message(message.chat.id, "https://www.youtube.com/channel/UCnWTKtFn9pb4-M0CxW24nWQ")
         if message.text == '🔰 Лучшая группа вк по дизайну 🔰':
