@@ -95,7 +95,6 @@ def callback_inline(call):
                 markup.add(item1)
                 img = open('shapka2.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, img, caption="""
-🏦 Сумма: 50₽
 После покупки🔖 данного товара😎 Вы получите🍩 топовую шапку🛸 для вашего YouTube🍿 канала 
 Сроки:
 Заказ выполняется максимум за 1-3 рабочих дня🥠
