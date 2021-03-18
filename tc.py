@@ -11,12 +11,12 @@ keyboardm.row('🔵 Дискорд канал 🔵','💬 Коментарии �
 
 
 keyboardaa = telebot.types.InlineKeyboardMarkup(row_width=1)
-avat=telebot.types.InlineKeyboardButton('🔥 Автарка 30₽ 🔥', callback_data='avat')
-shap=telebot.types.InlineKeyboardButton('☄️ Шапка 50₽ ☄️', callback_data='shap')
-ower=telebot.types.InlineKeyboardButton('🎋 Оверлей 40₽ 🎋', callback_data='ower')
-into=telebot.types.InlineKeyboardButton('🌴 Интро 40₽ 🌴', callback_data='into')
-pier=telebot.types.InlineKeyboardButton('🐙 Пиар 20₽ 🐙', callback_data='pier')
-prew=telebot.types.InlineKeyboardButton('🦋 Превю 15₽ 🦋', callback_data='prew')
+avat=telebot.types.InlineKeyboardButton('🔥 Автарка 15₽ 🔥', callback_data='avat')
+shap=telebot.types.InlineKeyboardButton('☄️ Шапка 25₽ ☄️', callback_data='shap')
+ower=telebot.types.InlineKeyboardButton('🎋 Оверлей 20₽ 🎋', callback_data='ower')
+into=telebot.types.InlineKeyboardButton('🌴 Интро 20₽ 🌴', callback_data='into')
+pier=telebot.types.InlineKeyboardButton('🐙 Пиар 10₽ 🐙', callback_data='pier')
+prew=telebot.types.InlineKeyboardButton('🦋 Превю 7₽ 🦋', callback_data='prew')
 iden=telebot.types.InlineKeyboardButton('🍷 Идентификация QIWI 15₽ 🍷', callback_data='iden')
 keyboardaa.add(avat, shap, ower, into, pier, prew, iden)
 
@@ -75,10 +75,8 @@ def callback_inline(call):
                 bot.send_photo(call.message.chat.id, img,  """
 Описание для аватарки 🏔
 После покупки данного товара Вы получите топовую 🔥 аватарку для вашего ютуб канала
-
 Сроки:
 Заказ🌭 выполняется максимум за 3 рабочих дня🥠
-
 План описания:⚡️
 1) Ник🍔
 2) Стиль🦑
@@ -98,12 +96,9 @@ def callback_inline(call):
                 img = open('shapka2.jpg', 'rb')
                 bot.send_photo(call.message.chat.id, img, caption="""
 🏦 Сумма: 50₽
-
 После покупки🔖 данного товара😎 Вы получите🍩 топовую шапку🛸 для вашего YouTube🍿 канала 
-
 Сроки:
 Заказ выполняется максимум за 1-3 рабочих дня🥠
-
 План описания:🍦
 1) Ваша название канала🦐
 2) Тематика канала🥙
@@ -117,10 +112,8 @@ def callback_inline(call):
                 bot.send_photo(call.message.chat.id, img, """
 Описание оверлея
 После покупки🔖 данного товара Вы получите топовый🔥 оверлей для вашего💈 YouTube👽  канала
-
 Сроки:
 Заказ выполняется максимум за 1-2 недели🥠
-
 План описания:🌭
 1) Ваше название канала👾
 2) Тематика канала🎉                
@@ -134,10 +127,8 @@ def callback_inline(call):
                 bot.send_video(call.message.chat.id, img, caption="""
 Описание для интро🎬
 После покупки данного товара Вы получите топовое🔥 интро для вашего ютуб канала
-
 Сроки:
 Заказ🌭 выполняется максимум за 3 рабочих дня🥠
-
 План описания:⚡️
 1) Ник🍔
 2) Стиль🦑
@@ -166,10 +157,8 @@ https://www.youtube.com/channel/UCnWTKtFn9pb4-M0CxW24nWQ
 Описание для превью🥙
 После покупки данного товара Вы получите топовое🍿 превью для вашего
 видео🦐
-
 Сроки:
 Заказ😎 выполняется максимум за 3 рабочих дня🥠
-
 План описания:⚡️
 1) Тема видео🚀
 2) Текст на превью🛰
