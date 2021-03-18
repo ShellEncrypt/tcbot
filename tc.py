@@ -11,12 +11,12 @@ keyboardm.row('🔵 Дискорд канал 🔵','💬 Коментарии �
 
 
 keyboardaa = telebot.types.InlineKeyboardMarkup(row_width=1)
-avat=telebot.types.InlineKeyboardButton('🔥 Автарка 15₽ 🔥', callback_data='avat')
-shap=telebot.types.InlineKeyboardButton('☄️ Шапка 25₽ ☄️', callback_data='shap')
-ower=telebot.types.InlineKeyboardButton('🎋 Оверлей 20₽ 🎋', callback_data='ower')
-into=telebot.types.InlineKeyboardButton('🌴 Интро 20₽ 🌴', callback_data='into')
-pier=telebot.types.InlineKeyboardButton('🐙 Пиар 10₽ 🐙', callback_data='pier')
-prew=telebot.types.InlineKeyboardButton('🦋 Превю 7₽ 🦋', callback_data='prew')
+avat=telebot.types.InlineKeyboardButton('🔥 Автарка 15₽ -50% 🔥', callback_data='avat')
+shap=telebot.types.InlineKeyboardButton('☄️ Шапка 25₽ -50% ☄️', callback_data='shap')
+ower=telebot.types.InlineKeyboardButton('🎋 Оверлей 20₽ -50% 🎋', callback_data='ower')
+into=telebot.types.InlineKeyboardButton('🌴 Интро 20₽ -50% 🌴', callback_data='into')
+pier=telebot.types.InlineKeyboardButton('🐙 Пиар 10₽ -50% 🐙', callback_data='pier')
+prew=telebot.types.InlineKeyboardButton('🦋 Превю 7₽ -50% 🦋', callback_data='prew')
 iden=telebot.types.InlineKeyboardButton('🍷 Идентификация QIWI 15₽ 🍷', callback_data='iden')
 keyboardaa.add(avat, shap, ower, into, pier, prew, iden)
 
