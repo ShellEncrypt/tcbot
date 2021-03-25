@@ -1,5 +1,6 @@
 import telebot
 import urllib
+import request
 from random import randint
 
 bot = telebot.TeleBot('1670953127:AAH6N-AJ9E4Rvek7i3cS8u50vigjk6B3oJo')
